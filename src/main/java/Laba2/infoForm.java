@@ -35,7 +35,7 @@ public class infoForm extends JFrame {
 						"Zagir Achatovich 20130718" + "<br>"
 						+ "Murat Alexandrovich 20130721" + "<br>"
 						+ "Emil Ruslanovich 20130836" + "<br>"
-						+ "Artem Vladimirovich 20130828"
+						+ "Artem Vladimirovich 20130828 09.04.2022"
 				);
 		
 		this.add(label);
