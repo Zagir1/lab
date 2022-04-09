@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>LR4</groupId>
+  <artifactId>LR4</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Laba4</name>
+
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <pluginManagement>
+      <plugins>
+	      <plugin>
+	          <artifactId>maven-compiler-plugin</artifactId>
+	          <version>3.3</version>
+	          <configuration>
+	              <source>1.8</source>
+	              <target>1.8</target>
+	          </configuration>
+	      </plugin>
+    
+          <plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-jar-plugin</artifactId>
+		      <version>3.1.1</version>
+		      <configuration>
+			      <finalName>LR4</finalName>    
+				  <archive>
+					  <manifest>
+					  <mainClass>Laba2.subversion</mainClass>
+					  </manifest>
+				  </archive>
+		      </configuration>
+		  </plugin>
+		  <plugin>
+		<artifactId>maven-resources-plugin</artifactId>
+		<version>2.6</version>
+    	<executions>
+        	<execution>
+            	<id>copy-resources</id>
+            	<phase>validate</phase>
+            	<goals>
+                	<goal>copy-resources</goal>
+            	</goals>
+            <configuration>
+                <outputDirectory>
+                       ${basedir}/target/src
+                </outputDirectory>
+                <resources>
+                    <resource>
+                        <directory>src</directory>
+                        <includes>
+                            <include>**/*.jpg</include>
+                        </includes>
+                    </resource>
+                    <resource>
+                        <directory>src</directory>
+                        <includes>
+                            <include>**/*.txt</include>
+                        </includes>
+                    </resource>
+                </resources>
+            </configuration>
+        </execution>
+    </executions>
+    </plugin>
+      </plugins>
+      </pluginManagement>
+      </build>
+</project>
